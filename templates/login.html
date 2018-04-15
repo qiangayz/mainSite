@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=IE9;IE=IE8;"/>
+    <meta name="keywords" content="多模测试主页登录"/>
+    <meta name="description" content="多模测试主页登录页面"/>
+    <link rel="shortcut icon" href="/static/img/sitehead.jpg">
+    <link rel="stylesheet" href="/static/common.css">
+    <title>登录-多模测试</title>
+</head>
+<body class="body" style="background-image: url(/static/img/bodybackgroud.jpg)">
+<div style="position: fixed;left:0;width: 55%;top: 0;bottom: 0;min-width:687px;opacity: 0" ></div>
+<div class="head">
+    <div style="margin:0 ;width: 100%">
+        <div style="float: left;font-size: 35px;color: blue;margin-left: 16%">
+            <img height="60" src="/static/img/head1.jpg"/>
+        </div>
+        <div style="float: right;">
+            <span style="margin-right: 30px">今日访问量：23</span>
+            <a href=# style="margin: 0 10px">关于</a>
+            <a href=# style="margin: 0 20px">帮助</a>
+            <a href=# style="margin: 0 20px">联系我们</a>
+        </div>
+        <div style="clear: both"></div>
+    </div>
+    <div style="min-width: 1000px ">
+    <div class="sig-wrapper">
+        <div class="comment1">
+            <img class="bodyimage" src="/static/img/bodylogo.jpg">
+        </div>
+        <div class="comment2">
+            <div style="width: 100%;
+                border-bottom: 1px solid #DDD;
+                padding-bottom: 5px;
+                overflow: hidden" >
+                <h2 style="font-size: 35px;margin-left:20px;float: left;
+                    font-weight: normal;
+                    color: #333; ">登录：</h2>
+
+                <a style="font-size: 14px;float: right;
+                        outline: 0;color:red;text-decoration: none;
+                    margin-top: 5px;margin-right: 50px">默认使用8位工号登录，不用输入密码</a>
+            </div>
+            <form action="/login/" method="POST">
+                <div style="margin-top: 10px">
+                    <input type="text" id="username" placeholder="工号/手机/邮箱" name="username"
+                           style="font-size: 14px;margin-left: 100px;width: 200px;height: 40px;border-radius: 4px;"/>
+                    <span  style="color: red">{{ msg1 }}</span>
+                </div>
+                <div>
+                    <input type="password" id="password" placeholder="登录密码" name="password"
+                           style="font-size: 14px;margin-left: 100px;width: 200px;height: 40px;border-radius: 4px;"/>
+                    <span  style="color: red">{{ msg2 }}</span>
+                </div>
+
+                <div style="margin-left: 100px">
+                    <input name="remember" value="1" checked="checked" type="checkbox">
+                    <span>保持登录状态</span>
+                    <a href="#" id="forget-password" class="find-pwd"
+                       style="float: right;margin-right: 50px">忘记密码？</a>
+                </div>
+                <div style="margin-left: 100px ;width: 200px">
+                    <input type="submit" style="width: 200px;background-color: dodgerblue;font-size: 20px;border-radius: 4px;" value="登录">
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <div>
+        <p class="endlogo">Copyright © 6092002351 All Rights Reserved.</p>
+    </div>
+    </div>
+</div>
+<script>
+    function show() {
+        alert("用户数据库暂未建立，请直接跳转至管理界面")
+    }
+</script>
+</body>
+</html>

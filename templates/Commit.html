@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/static/common.css">
+</head>
+<body>
+ <div class='head' style="margin:0 ;width: 100%">
+        <div style="float: left;font-size: 35px;color: blue;margin-left: 16%">
+            <img height="53" src="/static/img/head1.jpg"/>
+        </div>
+        <div style="float: right;">
+            <span style="margin-right: 30px">今日访问量：23</span>
+            <a href=# style="margin: 0 10px">关于</a>
+            <a href=# style="margin: 0 20px">帮助</a>
+            <a href=# style="margin: 0 20px">联系我们</a>
+        </div>
+        <div style="clear: both"></div>
+    </div>
+    <div>
+        {% include 'committag.html' %}
+    </div>
+<script src="/static/jquery-1.11.3/jquery.js"></script>
+<script src="/static/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+</body>
+</html>

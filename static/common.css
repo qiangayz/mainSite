@@ -1,0 +1,61 @@
+.body {
+    background: #f9f9f9;
+    font-size: 13px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0
+}
+
+.head {
+    background-image: url(/static/img/headback2.jpg);
+    width: 100%;
+    min-width: 1129px;
+    height: 60px;
+    border-bottom: 1px solid #DDD;
+    margin: 0;
+    padding: 0;
+    line-height: 60px;
+}
+
+.sig-wrapper {
+    width: 100%;
+    margin: 100px auto;
+    overflow: hidden;
+    min-width: 1250px;
+}
+
+.comment1 {
+    float: left;
+    margin-left: 10%;
+    margin-top: 40px;
+    height: 400px;
+    width: 42%;
+}
+
+.comment2 {
+    border: 1px solid #DDD;
+    border-radius: 4px;
+    background-color: #FFF;
+    float: right;
+    width: 25%;
+    min-width: 450px;
+    height: 400px;
+    margin-right: 10%
+}
+
+.bodyimage {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.endlogo {
+    position: fixed;
+    left: 40%;
+    bottom: 40px;
+}
+
+.hide {
+    display: none;
+}

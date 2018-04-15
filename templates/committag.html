@@ -1,0 +1,37 @@
+<style>
+    .commitmenu {
+        font-size: 18px
+    }
+</style>
+<div style="height: 300px;width: 400px;margin-top:100px;margin-left: 35% ">
+    <form action="/versionCommit/" method="POST" enctype="multipart/form-data">
+        <a  style="color: #003eff;font-size: 20px" href="#">查询历史表单提交状态</a>
+        <div class="form-group">
+            <h3>提交人:</h3>
+            <input type="text" name="commituser" class="form-control commitmenu" id="exampleInputEmail1" placeholder="示例：周强/6092002351">
+        </div>
+        <br/>
+        <div class="form-group">
+            <h3>备注:</h3>
+            <textarea class="form-control commitmenu" id="exampleInputPassword1" name="otherdata"
+                      placeholder="对版本的基本描述，环境需要的单板配置等等"></textarea>
+        </div>
+        <br/>
+        <div class="form-group commitmenu">
+            <h3>上传热补丁文件</h3>
+            <input type="file" id="exampleInputFile" name="versionfile">
+            <br>
+            <p class="help-block" style="color: red">上传单个版本文件，请勿重复提交</p>
+        </div>
+        <br/>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" class="" name="cloudtesttag">
+                <span class="commitmenu">需要进行基本业务验证</span>
+            </label>
+        </div>
+        <br/>
+        <button type="submit" class="btn btn-default commitmenu">提交版本</button>
+        <button type="button" class="btn btn-default commitmenu">重置</button>
+    </form>
+</div>
