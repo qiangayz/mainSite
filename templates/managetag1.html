@@ -6,9 +6,9 @@
 
     .s {
         margin-top: 0;
-        margin-left: 200px;
+{#        margin-left: 200px;#}
         width: 200px;
-        height: 50px;
+        height: 40px;
         font-size: 24px
     }
 
@@ -33,23 +33,19 @@
     <div style="float: left;width: 600px;margin-top:70px;margin-left:50px;">
     <form action="/versionManage/" method="POST">
         <div class="group">
-            <h2 class="h" style="">热补丁版本文件:</h2>
-            <br>
-        </div>
-        <div>
+            <label for="sel" class="p">热补丁版本文件:</label>
             <select id='sel'  name="VerNum" class="s" >
                  <option  class="p">版本文件</option>
                 {% for i in versionlist %}
                  <option value={{ i }} class="p">{{ i }}</option>
                 {% endfor %}
             </select>
-
         </div>
         <br>
         <br>
         <div class="group">
-            <h2 class="h">选择网管:</h2>
-            <select id='sel' name="OMMBid" class="s">
+            <label for="sel1" class="p">选择网管:</label>
+            <select id='sel1' name="OMMBid" class="s">
                 <option class="p" >192.168.4.220</option>
                 <option class="p" >192.168.8.220</option>
                 <option class="p" >192.168.10.220</option>
@@ -58,26 +54,29 @@
         <br>
         <br>
         <div class="group">
-            <h2 class="h">基站信息：</h2>
-            <div class="h"><span class="p">子网:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
-                <input type="text" name="subid" class="p"/></div>
+            <label for="sub1" class="p">子网:</label>
+                <input type="text" name="subid" id="sub1" class="p"/>
             <br>
-            <div class="h"><span class="p">基站号:&nbsp&nbsp&nbsp</span>
-                <input type="text"  name="neid" class="p"/></div>
+            <br>
+            <br>
+            <label for="neid" class="p">基站号:</label>
+                <input type="text" id="neid"  name="neid" class="p"/>
 
         </div>
         <br>
         <br>
-        <div class="checkbox">
-            <label>
-                <input type="checkbox" name="cloudtesttag" style="width: 30px;height: 30px;margin-left: 150px">
-                <span class="p" style="margin-left: 200px">是否执行自动化</span>
-            </label>
+        <div class="group">
+            <label for="cloud_test_tag1" class="p">执行自动化测试</label>
+                <input type="checkbox" name="cloudtesttag" id="cloud_test_tag1" style="width: 25px;height: 25px;margin-left: 10px">
+
+
         </div>
         <br>
         <br>
-        <button type="submit" style="margin-left: 200px;width: 200px;height: 50px;font-size: 24px">提交</button>
+        <button type="submit" style="width: 130px;height: 40px;font-size: 24px;margin-left: 150px">提交</button>
+        <button type="reset" style="width: 130px;height: 40px;font-size: 24px;margin-left: 30px">重置</button>
         <span  style="color: green;font-size: 27px ;margin-left: 50px">{{ successmsg }}</span>
+        <p  style="color: green;font-size: 30px ;margin-left: 150px;margin-top: 30px">提交成功!!!</p>
     </form>
     </div>
 
