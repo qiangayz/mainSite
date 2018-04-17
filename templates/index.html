@@ -2,44 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>多模测试</title>
     <link rel="stylesheet" href="/static/bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="/static/common.css">
-    <link rel="stylesheet" href="/static/jquery-ui-1.12.1.custom/jquery-ui.css">
+    <link rel="shortcut icon" href="/static/img/sitehead.jpg">
     <style>
-        .menu {
-            width: 100%;
-            height: 100px;
-            background-color: #c1e2b3;
-            border: 1px solid red;
-            color: black;
-            padding-left: 15px;
-            padding-top: 12px;
-            text-align: inherit;
-        }
-        .p {
-        font-size: 24px;width: 150px;}
         .center{
            text-align: center
         }
         .center .b{
-            font-size: 30px;
+            font-size: 45px;
             background-color:lightskyblue;
             color: black;
-            width: 300px;
+            width: 450px;
             margin-top: 20px;
         }
         .center .b:hover{
-            font-size: 30px;
+            font-size: 45px;
             text-align: justify;
             background-color:black;
             color: yellow;
-            width: 300px;
+            width: 450px;
             margin-top: 20px;
         }
     </style>
 </head>
-<body style="height: 100%;background-color: cornsilk">
+<body style="background-image: url(/static/img/bodybackgroud.jpg);min-width: 1129px">
 <div class='head' style="margin:0 ;width: 100%">
     <div style="float: left;font-size: 35px;color: blue;margin-left: 16%">
         <img height="53" src="/static/img/head1.jpg"/>
@@ -52,19 +40,14 @@
     </div>
     <div style="clear: both"></div>
 </div>
-<div style="position: fixed;
-    top:60px;
-    left: 0;
-    bottom:0;
-    width: 300px;height: 100%;min-width:300px;background-color: #c1e2b3">
-<div class="center">
+<div style="position: fixed;left:0;width: 55%;top: 0;bottom: 0;min-width:687px;opacity: 0" ></div>
+        <div class="comment1" style="margin-top: 200px">
+            <img class="bodyimage" src="/static/img/bodylogo.jpg">
+        </div>
+<div style="float: left;margin-top: 75px;margin-left: 50px">
+    <div class="center">
     <a href="/versionCommit/" ><button type="button"  class="btn btn-primary btn-lg b" >
         <span class="glyphicon glyphicon-file"></span> 热补丁提交
-    </button></a>
-    </div>
-    <div class="center">
-    <a href="#" ><button type="button"  class="btn btn-primary btn-lg b" >
-        <span class="	glyphicon glyphicon-search"></span> 热补丁状态查询
     </button></a>
     </div>
     <div class="center">
@@ -87,23 +70,13 @@
         <span class="glyphicon glyphicon-th-list"></span>核心网管理
     </button>
     </div>
-
-</div>
-<div style="float: left;width:1200px;height: 100%">
-    <div>
-        <div style="margin-left: 500px;margin-top: 100px;width: 700px">
-          <label for="sel1" class="p">选择版本:</label>
-            <select id='sel1' name="vernum" class="p" style="width: 300px">
-                {% for row in versionlist %}
-                <option class="p"  value="{{ row }}">{{ row }}</option>
-                {% endfor %}
-            </select>
-        <input type="button" class="p" style="width: 200px" value="查询执行状态"/>
-    </div>
+    <div class="center">
+    <a href="/versionManage/"><button type="button"  class="btn btn-primary btn-lg b" >
+        <span class="glyphicon glyphicon-wrench"></span> 后台管理
+    </button></a>
     </div>
 </div>
 <script src="/static/jquery-1.11.3/jquery.js"></script>
 <script src="/static/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-<script src="/static/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
 </body>
 </html>

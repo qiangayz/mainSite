@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>多模测试</title>
+    <link rel="shortcut icon" href="/static/img/sitehead.jpg">
     <link rel="stylesheet" href="/static/bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="/static/common.css">
 </head>
-<body>
+<body style="min-width: 1250px">
  <div class='head' style="margin:0 ;width: 100%">
         <div style="float: left;font-size: 35px;color: blue;margin-left: 16%">
             <img height="53" src="/static/img/head1.jpg"/>
@@ -19,9 +20,26 @@
         </div>
         <div style="clear: both"></div>
     </div>
-    <div>
-        {% include 'committag.html' %}
+   <div style="float: left;margin-left: 75px">
+        {% include 'managetag1.html' %}
     </div>
+   <div>
+    <div style="margin-left: 100px;float:left;margin-top: 100px;width: 400px;display: {{ msg1}}">
+        <h1 style="color: green">提交成功！</h1>
+    <div class="endata">提交单号：{{ msg.0 }}</div>
+    <div class="endata">提交时间：{{ msg.1 }}</div>
+    <div class="endata">提交人：{{ msg.2}}</div>
+    <div class="endata">网管：{{ msg.3 }}</div>
+    <div class="endata">子网：{{ msg.4 }}</div>
+    <div class="endata">基站号：{{ msg.5 }}</div>
+    <div class="endata">父版本路径：{{ msg.6 }}</div>
+    <div class="endata">补丁文件名称{{ msg.7}}</div>
+    <div class="endata">自动化标识：{{ msg.8}}</div>
+    <div class="endata">备注信息：{{ msg.9 }}</div>
+        <br>
+    <a  href="/versionManage/" class="endata" style="color: blue">跳转至后台管理</a>
+   </div>
+
 <script src="/static/jquery-1.11.3/jquery.js"></script>
 <script src="/static/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 </body>
