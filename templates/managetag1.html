@@ -35,7 +35,7 @@
         <form action="/versionCommit/" method="POST" enctype="multipart/form-data">
         <div class="form-group">
             <label for="exampleInputEmail1" class="p">提交人：</label>
-            <input type="text" name="commituser"  class='p';style="font-size: 15px" id="exampleInputEmail1" placeholder="示例：周强/6092002351">
+            <input type="text" name="commituser" required class='p';style="font-size: 15px" id="exampleInputEmail1" placeholder="示例：周强/6092002351">
         </div>
         <div class="group">
             <label for="sel1" class="p">选择网管:</label>
@@ -47,22 +47,22 @@
         </div>
         <br>
         <div class="group">
-            <label for="sub1" class="p">子网:</label>
-                <input type="text" name="subid" id="sub1" class="p"/>
+            <label for="sub1"  class="p">子网:</label>
+                <input type="text" required name="subid" id="sub1" class="p"/>
             <br>
             <br>
             <label for="neid" class="p">基站号:</label>
-                <input type="text" id="neid"  name="neid" class="p"/>
+                <input type="text" required id="neid"  name="neid" class="p"/>
 
         </div>
         <br>
             <div class="form-group">
             <label for="exampleInputEmail1" class="p">父版本路径：</label>
-            <input type="text" name="parent_path"  class="p";style="font-size: 18px" id="exampleInputEmail1" >
+            <input type="text" name="parent_path" disabled class="p";style="font-size: 18px" id="exampleInputEmail1" >
             </div>
         <div class="form-group commitmenu">
            <span class="p" style="font-weight: 900">热补丁文件：</span>
-            <input type="file" id="exampleInputFile" name="versionfile" style="margin-left: 250px;font-size: 18px">
+            <input type="file" required id="exampleInputFile" name="versionfile" style="margin-left: 250px;font-size: 18px">
         </div>
         <div class="group">
             <label for="cloud_test_tag1" class="p">执行自动化测试</label>
